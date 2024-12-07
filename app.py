@@ -6,7 +6,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 popular_df = pickle.load(open('popular.pkl', 'rb'))
 pt = pickle.load(open('pt.pkl', 'rb'))
-books = pd.read_csv('Books.csv')
+books = pd.read_csv('Books.csv', low_memory=False)
+
 
 app = Flask(__name__)
 
